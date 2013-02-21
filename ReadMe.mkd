@@ -1,0 +1,30 @@
+Glimpse for StructureMap
+============================
+
+Description
+-----------
+
+This is a simple Glimpse plugin to show StructureMap bound interfaces to implementations as well as current settings in the default container just by dropping the assembly into your project.
+
+Usage
+-----
+
+Either build the project and reference the `Glimpse.StructureMap.dll` in your Glimpse-enabled project or execute `Install-Package GlimpseStructureMap` in the Package Manager Console to install the [NuGet package](http://nuget.org/packages/Glimpse.StructureMap).  
+
+To enable the plugin, you have to call the `ActivateGlimpse()` extension method on your `IContainer`.
+
+Example
+-------
+
+The Glimpse.StructureMap.Mvc3Sample ASP.NET MVC application simply shows a basic default StructureMap configuration.  The HomeController has a dependency on IFooBar and FooBar implements IFooBar interface.
+StructureMap auto scan will create a configuration mapping for IFooBar with a concrete type of FooBar. StructureMap will inject the concrete implementation of IFooBar as FooBar resulting in the View displaying 'Snickers'.
+
+Support
+-------
+
+Create an issue here on GitHub, send me a message or fork the project and send me a pull request.
+
+Open Source License
+-------------------
+
+Glimpse for Autofac is free software distributed under the [Apache License 2.0](http://www.apache.org/licenses/LICENSE-2.0).

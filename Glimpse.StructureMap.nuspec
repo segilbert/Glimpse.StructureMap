@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Glimpse.StructureMap</id>
+    <title>Glimpse.StructureMap</title>
+    <version>1.0.0</version>
+    <authors>Sean Gilbert</authors>
+    <owners>Sean Gilbert</owners>
+    <summary>Adds StructureMap tab to Glimpse.  Allows viewing all bound interfaces to implementations as well as current settings in the default container just by dropping the assembly into your project.</summary>
+    <description>Adds StructureMap tab to Glimpse.</description>
+    <projectUrl>https://github.com/segilbert/Glimpse.StructureMap</projectUrl>
+    <tags>frozenbytes glimpse structuremap plugin</tags>
+    <copyright>frozenbytes 2013</copyright>
+	<licenseUrl>https://github.com/segilbert/Glimpse.StructureMap/master/LICENSE.txt</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <iconUrl>http://www.i-m-code.com/blog/images/frozen_sm.png</iconUrl>
+    <dependencies>
+		<dependency id="Glimpse" version="1.0.0" />           
+  		<dependency id="structuremap" version="2.6.4.1" />           
+    </dependencies>
+    <releaseNotes></releaseNotes>
+  </metadata>
+  <files>
+	<file src="Glimpse.StructureMap\bin\Release\Glimpse.StructureMap.dll" target="lib\net4" />
+	<file src="Glimpse.StructureMap\bin\Release\Glimpse.StructureMap.pdb" target="lib\net4" />
+  </files>
+</package>
