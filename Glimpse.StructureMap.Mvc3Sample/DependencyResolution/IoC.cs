@@ -18,4 +18,5 @@ namespace Glimpse.StructureMap.Mvc3Sample {
             return ObjectFactory.Container;
         }
     }
+
 }

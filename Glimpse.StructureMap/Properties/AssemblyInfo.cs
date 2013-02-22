@@ -6,12 +6,12 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("Glimpse.StructureMap")]
-[assembly: AssemblyDescription("")]
-[assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyDescription("Glimpse Plugin for StructureMap")]
+[assembly: AssemblyConfiguration("1.0.0")]
+[assembly: AssemblyCompany("frozenbytes")]
 [assembly: AssemblyProduct("Glimpse.StructureMap")]
-[assembly: AssemblyCopyright("Copyright ©  2013")]
-[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCopyright("Copyright © frozenbytes 2013")]
+[assembly: AssemblyTrademark("frozenbytes")]
 [assembly: AssemblyCulture("")]
 
 // Setting ComVisible to false makes the types in this assembly not visible 
