@@ -11,13 +11,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{5AFA47
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuspec", ".nuspec", "{7EB3AF8F-48F7-4C45-9919-C9F8047DDB59}"
-	ProjectSection(SolutionItems) = preProject
+	ProjectSection(SolutionItems) = preProject
 		BuildPackage.bat = BuildPackage.bat
 		Glimpse.StructureMap.nuspec = Glimpse.StructureMap.nuspec
 		PushPackage.bat = PushPackage.bat
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Glimpse.StructureMap.Sample.Web", "Glimpse.StructureMap.Mvc3Sample\Glimpse.StructureMap.Sample.Web.csproj", "{15266706-3F33-4864-BE49-705024901483}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Glimpse.StructureMap.Sample.Web", "Glimpse.StructureMap.Sample.Web\Glimpse.StructureMap.Sample.Web.csproj", "{15266706-3F33-4864-BE49-705024901483}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{49615304-DD4D-41D6-BA13-1267F4052D6F}"
 	ProjectSection(SolutionItems) = preProject
