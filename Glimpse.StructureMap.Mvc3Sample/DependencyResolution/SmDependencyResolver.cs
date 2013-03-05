@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web.Mvc;
 using StructureMap;
 
-namespace Glimpse.StructureMap.Mvc3Sample
+namespace Glimpse.StructureMap.Sample.Web
 {
     public class SmDependencyResolver : IDependencyResolver {
 

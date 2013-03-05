@@ -17,13 +17,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuspec", ".nuspec", "{7EB3
 		PushPackage.bat = PushPackage.bat
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Glimpse.StructureMap.Mvc3Sample", "Glimpse.StructureMap.Mvc3Sample\Glimpse.StructureMap.Mvc3Sample.csproj", "{15266706-3F33-4864-BE49-705024901483}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Glimpse.StructureMap.Sample.Web", "Glimpse.StructureMap.Mvc3Sample\Glimpse.StructureMap.Sample.Web.csproj", "{15266706-3F33-4864-BE49-705024901483}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{49615304-DD4D-41D6-BA13-1267F4052D6F}"
 	ProjectSection(SolutionItems) = preProject
 		LICENSE.txt = LICENSE.txt
 		ReadMe.mkd = ReadMe.mkd
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Glimpse.StructureMap.Sample.Core", "Glimpse.StructureMap.Sample.Core\Glimpse.StructureMap.Sample.Core.csproj", "{F0784EE7-6E2B-4ABD-8389-73D475E769C7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Glimpse.StructureMap.Sample.Services", "Glimpse.StructureMap.Sample.Services\Glimpse.StructureMap.Sample.Services.csproj", "{9031E6C8-A772-4181-ADF6-E669D58822EE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +43,14 @@ Global
 		{15266706-3F33-4864-BE49-705024901483}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{15266706-3F33-4864-BE49-705024901483}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{15266706-3F33-4864-BE49-705024901483}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F0784EE7-6E2B-4ABD-8389-73D475E769C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F0784EE7-6E2B-4ABD-8389-73D475E769C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F0784EE7-6E2B-4ABD-8389-73D475E769C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F0784EE7-6E2B-4ABD-8389-73D475E769C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9031E6C8-A772-4181-ADF6-E669D58822EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9031E6C8-A772-4181-ADF6-E669D58822EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9031E6C8-A772-4181-ADF6-E669D58822EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9031E6C8-A772-4181-ADF6-E669D58822EE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -7,7 +7,7 @@ using System.Web.Routing;
 //
 using StructureMap;
 
-namespace Glimpse.StructureMap.Mvc3Sample
+namespace Glimpse.StructureMap.Sample.Web
 {
     // Note: For instructions on enabling IIS6 or IIS7 classic mode, 
     // visit http://go.microsoft.com/?LinkId=9394801

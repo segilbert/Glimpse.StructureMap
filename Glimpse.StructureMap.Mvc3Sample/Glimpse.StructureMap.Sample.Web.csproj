@@ -11,8 +11,8 @@
     <ProjectTypeGuids>{E53F8FEA-EAE0-44A6-8774-FFD645390401};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Glimpse.StructureMap.Mvc3Sample</RootNamespace>
-    <AssemblyName>Glimpse.StructureMap.Mvc3Sample</AssemblyName>
+    <RootNamespace>Glimpse.StructureMap.Sample.Web</RootNamespace>
+    <AssemblyName>Glimpse.StructureMap.Sample.Web</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
@@ -114,18 +114,16 @@
   <ItemGroup>
     <Compile Include="App_Start\StructuremapMvc.cs" />
     <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\FooBar.cs" />
-    <Compile Include="Controllers\FooBar2.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\IFooBar.cs" />
-    <Compile Include="Controllers\IFooBar2.cs" />
     <Compile Include="DependencyResolution\IoC.cs" />
+    <Compile Include="DependencyResolution\ServiceRegistry.cs" />
     <Compile Include="DependencyResolution\SmDependencyResolver.cs" />
     <Compile Include="GlimpseSecurityPolicy.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Models\GlimpseStructureMapSampleWebContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -230,6 +228,14 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Glimpse.StructureMap.Sample.Core\Glimpse.StructureMap.Sample.Core.csproj">
+      <Project>{f0784ee7-6e2b-4abd-8389-73d475e769c7}</Project>
+      <Name>Glimpse.StructureMap.Sample.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Glimpse.StructureMap.Sample.Services\Glimpse.StructureMap.Sample.Services.csproj">
+      <Project>{9031e6c8-a772-4181-adf6-e669d58822ee}</Project>
+      <Name>Glimpse.StructureMap.Sample.Services</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Glimpse.StructureMap\Glimpse.StructureMap.csproj">
       <Project>{0a7d76de-0e3c-462a-b3b5-9cf61b7eb6e4}</Project>
       <Name>Glimpse.StructureMap</Name>

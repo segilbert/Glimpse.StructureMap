@@ -1,1 +1,1 @@
-﻿<%@ Application Codebehind="Global.asax.cs" Inherits="Glimpse.StructureMap.Mvc3Sample.MvcApplication" Language="C#" %>
+﻿<%@ Application Codebehind="Global.asax.cs" Inherits="Glimpse.StructureMap.Sample.Web.MvcApplication" Language="C#" %>

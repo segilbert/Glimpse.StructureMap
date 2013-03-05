@@ -5,9 +5,9 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
 using System.Web.Security;
-using Glimpse.StructureMap.Mvc3Sample.Models;
+using Glimpse.StructureMap.Sample.Web.Models;
 
-namespace Glimpse.StructureMap.Mvc3Sample.Controllers
+namespace Glimpse.StructureMap.Sample.Web.Controllers
 {
     public class AccountController : Controller
     {

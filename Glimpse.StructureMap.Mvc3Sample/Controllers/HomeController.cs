@@ -1,29 +1,31 @@
 ﻿//
 using System.Web.Mvc;
+//
+using Glimpse.StructureMap.Sample.Core.Interfaces;
 
-namespace Glimpse.StructureMap.Mvc3Sample.Controllers
+namespace Glimpse.StructureMap.Sample.Web.Controllers
 {
     public class HomeController : Controller
     {
-        private IFooBar _bar;
-        private IFooBar2 _bar2;
-        private IFooBar3 _bar3;
+        private IFooBarService _barService;
+        private IFooBar2Service _bar2Service;
+        private ISomeOtherInterface _someOtherInterface;
 
-        public HomeController(IFooBar bar, IFooBar2 bar2, IFooBar3 bar3)
+        public HomeController(IFooBarService barService, IFooBar2Service bar2Service, ISomeOtherInterface someOtherInterface)
         {
-            _bar = bar;
-            _bar2 = bar2;
-            _bar3 = bar3;
+            _barService = barService;
+            _bar2Service = bar2Service;
+            _someOtherInterface = someOtherInterface;
         }
         public ActionResult Index()
         {
             ViewBag.Message = "Welcome to ASP.NET MVC!";
-            _bar.Name = "Snickers";
-            ViewBag.Bar = _bar;
-            _bar2.Name = "KitKat";
-            ViewBag.Bar2 = _bar2;
-            _bar3.Name = "Rollo";
-            ViewBag.Bar3 = _bar3;
+            _barService.Name = "Snickers";
+            ViewBag.Bar = _barService;
+            _bar2Service.Name = "KitKat";
+            ViewBag.Bar2 = _bar2Service;
+            _someOtherInterface.Name = "Rollo";
+            ViewBag.SomeOtherInterface = _someOtherInterface;
 
             return View();
         }

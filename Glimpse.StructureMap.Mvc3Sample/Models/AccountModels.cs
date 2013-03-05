@@ -5,7 +5,7 @@ using System.Globalization;
 using System.Web.Mvc;
 using System.Web.Security;
 
-namespace Glimpse.StructureMap.Mvc3Sample.Models
+namespace Glimpse.StructureMap.Sample.Web.Models
 {
 
     public class ChangePasswordModel

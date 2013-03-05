@@ -1,7 +1,9 @@
 //
+
+using Glimpse.StructureMap.Sample.Web.DependencyResolution;
 using StructureMap;
 
-namespace Glimpse.StructureMap.Mvc3Sample {
+namespace Glimpse.StructureMap.Sample.Web {
     public static class IoC {
         public static IContainer Initialize() {
             ObjectFactory.Initialize(x =>
@@ -12,7 +14,7 @@ namespace Glimpse.StructureMap.Mvc3Sample {
                                         scan.WithDefaultConventions();
                                         scan.LookForRegistries();
                                     });
-            //                x.For<IExample>().Use<Example>();
+                            x.AddRegistry(new ServiceRegistry());
                         });
             
             return ObjectFactory.Container;
