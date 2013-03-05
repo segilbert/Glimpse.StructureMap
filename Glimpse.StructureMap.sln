@@ -11,7 +11,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{5AFA47
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuspec", ".nuspec", "{7EB3AF8F-48F7-4C45-9919-C9F8047DDB59}"
-	ProjectSection(SolutionItems) = preProject
+	ProjectSection(SolutionItems) = preProject
 		BuildPackage.bat = BuildPackage.bat
 		Glimpse.StructureMap.nuspec = Glimpse.StructureMap.nuspec
 		PushPackage.bat = PushPackage.bat
