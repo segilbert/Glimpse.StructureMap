@@ -16,40 +16,6 @@ namespace Glimpse.StructureMap
     {
         public static IContainer ContainerInstance { private get; set; }
 
-        private struct StructureMapLayout
-        {
-            public struct Root
-            {
-                public const int SECTION = 0;
-                public const int DETAILS = 1;
-
-                public struct General
-                {
-                    public const int GENERAL = 0;
-                    public const int PROPERTY = 0;
-                    public const int VALUE = 1;
-                }
-
-                public struct ConfigurationSource
-                {
-                    public const int CONFIGURATION_SOURCE = 1;
-                    public const int REGISTRY = 0;
-                    public const int DETAILS = 1;
-
-                    public struct Details
-                    {
-                        public const int PROPERTY = 0;
-                        public const int VALUE = 1;
-                    
-                    }
-                }
-
-                public struct Registrations
-                {
-                }
-            }
-        };
-
         public override string Name
         {
             get { return "StructureMap"; }
