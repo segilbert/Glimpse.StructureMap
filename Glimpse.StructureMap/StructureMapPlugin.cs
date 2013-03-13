@@ -6,7 +6,6 @@ using System.Linq;
 using StructureMap;
 using StructureMap.Query;
 //
-using Glimpse.Core.Tab.Assist;
 using Glimpse.Core.Extensibility;
 
 
@@ -70,7 +69,7 @@ namespace Glimpse.StructureMap
             return root;
         }
 
-        private string FormateLifecycle(IPluginTypeConfiguration pxTypeConfiguration)
+        private string FormatLifecycle(IPluginTypeConfiguration pxTypeConfiguration)
         {
             string scope = string.Empty;
 
@@ -93,7 +92,7 @@ namespace Glimpse.StructureMap
                                   String.Format("{0} ({1}) \r\n\r Scoped: {2}",
                                               registration.PluginType.Name,
                                               registration.PluginType.FullName,
-                                              FormateLifecycle(pxContainer.Model.For(registration.PluginType))),
+                                              FormatLifecycle(pxContainer.Model.For(registration.PluginType))),
                                   (registration.ConcreteType != null ? "info" : "warn")});
             propertyValue.Add(new object[] {"Namespace", registration.PluginType.Namespace });
             propertyValue.Add(new object[] {"Assembly", registration.PluginType.AssemblyQualifiedName});
