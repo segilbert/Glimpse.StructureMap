@@ -3,8 +3,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 //
-using ServiceStack.Text;
-//
 using StructureMap;
 using StructureMap.Query;
 //
@@ -14,9 +12,43 @@ using Glimpse.Core.Extensibility;
 
 namespace Glimpse.StructureMap
 {
-    public class StructureMapPlugin : TabBase, IDocumentation//, ITabLayout
+    public class StructureMapPlugin : TabBase, IDocumentation
     {
         public static IContainer ContainerInstance { private get; set; }
+
+        private struct StructureMapLayout
+        {
+            public struct Root
+            {
+                public const int SECTION = 0;
+                public const int DETAILS = 1;
+
+                public struct General
+                {
+                    public const int GENERAL = 0;
+                    public const int PROPERTY = 0;
+                    public const int VALUE = 1;
+                }
+
+                public struct ConfigurationSource
+                {
+                    public const int CONFIGURATION_SOURCE = 1;
+                    public const int REGISTRY = 0;
+                    public const int DETAILS = 1;
+
+                    public struct Details
+                    {
+                        public const int PROPERTY = 0;
+                        public const int VALUE = 1;
+                    
+                    }
+                }
+
+                public struct Registrations
+                {
+                }
+            }
+        };
 
         public override string Name
         {
@@ -34,19 +66,14 @@ namespace Glimpse.StructureMap
         {
             get { return ""; }
         }
-
-        //public object GetLayout()
-        //{
-        //    return GetGlimpseStructureMapeLayout();
-        //}
-
+        
         private List<object[]> GetGlimpseStructureMapTabData(IContainer pxContainer)
         {
             if (pxContainer == null) return null;
 
             // Data Structure
             List<object[]> root = new List<object[]> {new object[] {"Section", "Details"}};
-            List<object[]> familyRegistration = new List<object[]> { new object[] { "PluginType", "Namespace", "Assembly", "Concrete" } };
+            List<object[]> familyRegistration = new List<object[]> { new object[] { "PluginType", "Concrete" } };
             List<object[]> general = new List<object[]> { new object[] { "Property", "Value"}};
         
             Container container = (Container) pxContainer;
@@ -68,27 +95,60 @@ namespace Glimpse.StructureMap
             // Family Registrations
             familyRegistration.AddRange(registrations.Select(registration => new object[]
                 {
-                    String.Format("{0} ({1}) \r\n\r Scoped: {2}",
-                                  registration.PluginType.Name,
-                                  registration.PluginType.FullName,
-                                  FormateLifecycle(pxContainer.Model.For(registration.PluginType))),
-                    registration.PluginType.Namespace,
-                    registration.PluginType.AssemblyQualifiedName,
+                    GetRegistrationPluginType(registration,pxContainer),
                     GetRegistrationConcrete(registration)
                 }));
-
-            root.Add(new object[] { "Family Registrations", new object[] { "Registration", familyRegistration } });
+            //
+           root.Add(new object[] { "Family Registrations", familyRegistration });
 
             return root;
+        }
+
+        private string FormateLifecycle(IPluginTypeConfiguration pxTypeConfiguration)
+        {
+            string scope = string.Empty;
+
+            if (pxTypeConfiguration == null)
+                return scope;
+
+            if (pxTypeConfiguration.Lifecycle != null)
+                scope = "Scoped as:  " + pxTypeConfiguration.Lifecycle;
+            else
+                scope = "Scoped as:  PerRequest/Transient";
+
+            return scope;
+        }
+
+        private List<object[]> GetRegistrationPluginType(InstanceRef registration, IContainer pxContainer)
+        {
+            List<object[]> propertyValue = new List<object[]> {new object[] {"Property", "Value"}};
+
+            propertyValue.Add(new object[]{ "PluginType",
+                                  String.Format("{0} ({1}) \r\n\r Scoped: {2}",
+                                              registration.PluginType.Name,
+                                              registration.PluginType.FullName,
+                                              FormateLifecycle(pxContainer.Model.For(registration.PluginType))),
+                                  (registration.ConcreteType != null ? "info" : "warn")});
+            propertyValue.Add(new object[] {"Namespace", registration.PluginType.Namespace });
+            propertyValue.Add(new object[] {"Assembly", registration.PluginType.AssemblyQualifiedName});
+
+            return propertyValue;
         }
 
         private List<object[]> GetRegistrationConcrete(InstanceRef registration)
         {
             List<object[]> propertyValue = new List<object[]> { new object[] { "Property", "Value"}};
 
-            propertyValue.Add(new object[] {"Concrete", (registration.ConcreteType != null
-                                 ? String.Format("{0} ({1})", registration.ConcreteType.Name, registration.ConcreteType.FullName)
-                                 : string.Empty)});
+            propertyValue.Add(registration.ConcreteType != null
+                                  ? new object[]
+                                      {
+                                          "Concrete",
+                                          String.Format("{0} ({1})", registration.ConcreteType.Name,
+                                                        registration.ConcreteType.FullName),
+                                          "info"
+                                      }
+                                  : new object[] {"Concrete", string.Empty, "warn"});
+
             propertyValue.Add(new object[] {"Description",registration.Description});
             propertyValue.Add(new object[] {"Namespace", (registration.ConcreteType != null ? registration.ConcreteType.Namespace : string.Empty)});
             propertyValue.Add(new object[] {"Assembly",(registration.ConcreteType != null ? registration.ConcreteType.AssemblyQualifiedName : string.Empty)});
@@ -154,33 +214,6 @@ namespace Glimpse.StructureMap
             return configurationSources;
         }
        
-        private string FormateLifecycle(IPluginTypeConfiguration pxTypeConfiguration)
-        {
-            string scope = string.Empty;
-
-            if (pxTypeConfiguration == null)
-                return scope;
-
-            if (pxTypeConfiguration.Lifecycle != null)
-                scope = "Scoped as:  " + pxTypeConfiguration.Lifecycle;
-            else
-                scope = "Scoped as:  PerRequest/Transient";
-
-            return scope;
-        }
-
-        //private static readonly object Layout = TabLayout.Create()
-        //                .Row(r =>
-        //                    {
-        //                        r.Cell(0).SetLayout(TabLayout.Create().Row(x =>
-        //                            x
-        //                            {
-                                    
-        //                            })
-        //                    });
-
-
-
     }
 
 }
