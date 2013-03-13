@@ -236,7 +236,7 @@
       <Project>{9031e6c8-a772-4181-adf6-e669d58822ee}</Project>
       <Name>Glimpse.StructureMap.Sample.Services</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Glimpse.StructureMap\Glimpse.StructureMap.csproj">
+    <ProjectReference Include="..\..\Glimpse.StructureMap\Glimpse.StructureMap.csproj">
       <Project>{0a7d76de-0e3c-462a-b3b5-9cf61b7eb6e4}</Project>
       <Name>Glimpse.StructureMap</Name>
     </ProjectReference>

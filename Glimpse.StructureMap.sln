@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Glimpse.StructureMap", "Glimpse.StructureMap\Glimpse.StructureMap.csproj", "{0A7D76DE-0E3C-462A-B3B5-9CF61B7EB6E4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Glimpse.StructureMap", "src\Glimpse.StructureMap\Glimpse.StructureMap.csproj", "{0A7D76DE-0E3C-462A-B3B5-9CF61B7EB6E4}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{5AFA473C-25A9-461D-A94D-755C75B3DB13}"
 	ProjectSection(SolutionItems) = preProject
@@ -17,7 +17,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuspec", ".nuspec", "{7EB3
 		PushPackage.bat = PushPackage.bat
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Glimpse.StructureMap.Sample.Web", "Glimpse.StructureMap.Sample.Web\Glimpse.StructureMap.Sample.Web.csproj", "{15266706-3F33-4864-BE49-705024901483}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Glimpse.StructureMap.Sample.Web", "src\Sample\Glimpse.StructureMap.Sample.Web\Glimpse.StructureMap.Sample.Web.csproj", "{15266706-3F33-4864-BE49-705024901483}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{49615304-DD4D-41D6-BA13-1267F4052D6F}"
 	ProjectSection(SolutionItems) = preProject
@@ -25,9 +25,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		ReadMe.mkd = ReadMe.mkd
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Glimpse.StructureMap.Sample.Core", "Glimpse.StructureMap.Sample.Core\Glimpse.StructureMap.Sample.Core.csproj", "{F0784EE7-6E2B-4ABD-8389-73D475E769C7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Glimpse.StructureMap.Sample.Core", "src\Sample\Glimpse.StructureMap.Sample.Core\Glimpse.StructureMap.Sample.Core.csproj", "{F0784EE7-6E2B-4ABD-8389-73D475E769C7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Glimpse.StructureMap.Sample.Services", "Glimpse.StructureMap.Sample.Services\Glimpse.StructureMap.Sample.Services.csproj", "{9031E6C8-A772-4181-ADF6-E669D58822EE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Glimpse.StructureMap.Sample.Services", "src\Sample\Glimpse.StructureMap.Sample.Services\Glimpse.StructureMap.Sample.Services.csproj", "{9031E6C8-A772-4181-ADF6-E669D58822EE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
