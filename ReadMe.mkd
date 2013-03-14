@@ -27,4 +27,4 @@ Create an issue here on GitHub, send me a message or fork the project and send m
 Open Source License
 -------------------
 
-Glimpse for Autofac is free software distributed under the [Apache License 2.0](http://www.apache.org/licenses/LICENSE-2.0).
+Glimpse for StructureMap is free software distributed under the [Apache License 2.0](http://www.apache.org/licenses/LICENSE-2.0).
