@@ -29,7 +29,7 @@ namespace Glimpse.StructureMap
 
         public string DocumentationUri
         {
-            get { return ""; }
+            get { return "https://github.com/segilbert/Glimpse.StructureMap/wiki"; }
         }
         
         private List<object[]> GetGlimpseStructureMapTabData(IContainer pxContainer)
