@@ -7,7 +7,7 @@ namespace Glimpse.StructureMap.Sample.Web.App_Start {
     public static class StructuremapMvc {
         public static void Start() {
             var container = (IContainer) IoC.Initialize();
-            container.ActivateGlimpse();
+            container.ActivateGlimpseStructureMap();
             DependencyResolver.SetResolver(new SmDependencyResolver(container));
             
         }
