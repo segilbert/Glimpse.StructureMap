@@ -1,4 +1,4 @@
-Glimpse for StructureMap
+Glimpse 1.2.x for StructureMap 2.6.x>
 ============================
 
 Description
