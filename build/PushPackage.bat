@@ -1,3 +1,3 @@
-NuGet Push Glimpse.StructureMap.1.1.0-beta.nupkg
+NuGet Push Glimpse.StructureMap.1.1.1-beta.nupkg
  
 pause
