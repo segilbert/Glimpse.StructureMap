@@ -11,7 +11,7 @@ Usage
 
 Either build the project and reference the `Glimpse.StructureMap.dll` in your Glimpse-enabled project or execute `Install-Package GlimpseStructureMap` in the Package Manager Console to install the [NuGet package](http://nuget.org/packages/Glimpse.StructureMap).  
 
-To enable the plugin, you have to call the `ActivateGlimpse()` extension method on your `IContainer`.
+To enable the plugin, you have to call the `ActivateGlimpseStructureMap()` extension method on your `IContainer`.
 
 Example
 -------
